@@ -1,14 +1,11 @@
-import { Player } from './player.js'
 import { Card, getCards } from './cardList.js'
 import { shuffleSet } from './shuffleCards.js'
 
-export default function play(){
-    let player1 = new Player("Sodiq")
-    let player2 = new Player("Musk")
-
+export default function stagingArea(player1, player2){
     let cards = shuffleSet(getCards());
 
     distribute(player1, player2, cards);
+    return (cards);
 }
 
 function distribute(player1, player2, cards){
