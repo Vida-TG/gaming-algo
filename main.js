@@ -17,7 +17,7 @@ function play(player, card, cardPile){
         }
         cardPile.unshift(card);
         if (!player.cards){
-            console.log("Finished");
+            console.log("Player won game ended");
         }
     }
 }
