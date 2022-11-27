@@ -9,10 +9,14 @@ let cardPile = []
 cardPile.unshift(cards.pop());
 
 
-function play(card){
+function play(player, card, cardPile){
     if ( card.shape.name == cardPile[0].shape.name || card.number == cardPile[0].number ){
+        let index = player.cards.indexOf(card);
+        if (index > -1){
+            player.cards.splice(index, 1);
+        }
         cardPile.unshift(card);
-        if (!player1.cards || !player2.cards){
+        if (!player.cards){
             console.log("Finished");
         }
     }
